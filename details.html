@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Server Info</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #1d4354, #a43931);
+            color: #fff;
+            text-align: center;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+        }
+        table {
+            margin: 20px auto;
+            border-collapse: collapse;
+            width: 100%;
+        }
+        table, th, td {
+            border: 1px solid #fff;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #4caf50;
+        }
+        td {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+        button {
+            background: #4caf50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 10px 5px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Server IP & PORT</h1>
+        <table>
+            <tr>
+                <th>Type</th>
+                <th>IP</th>
+                <th>Port</th>
+            </tr>
+            <tr>
+                <td>Bedrock</td>
+                <td>lb4serverr.aternos.me</td>
+                <td>12895</td>
+            </tr>
+            <tr>
+                <td>Java</td>
+                <td colspan="2">lb4serverr.aternos.me:12895</td>
+            </tr>
+        </table>
+        <button onclick="copyBedrock()">Copy Bedrock Info</button>
+        <button onclick="copyJava()">Copy Java Info</button>
+    </div>
+
+    <script>
+        function copyBedrock() {
+            const bedrockInfo = "IP: lb4serverr.aternos.me, Port: 12895";
+            navigator.clipboard.writeText(bedrockInfo).then(() => {
+                alert("Bedrock info copied to clipboard!");
+            });
+        }
+
+        function copyJava() {
+            const javaInfo = "IP: lb4serverr.aternos.me:12895";
+            navigator.clipboard.writeText(javaInfo).then(() => {
+                alert("Java info copied to clipboard!");
+            });
+        }
+    </script>
+</body>
+</html>
