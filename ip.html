@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IP - رمضان كرافت</title>
+    <link rel="stylesheet" href="ip-style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>مرحبًا بك معنا في <span>رمضان كرافت</span></h1>
+        <p class="ip" id="server-ip">rmdncraft.aternos.me:33490</p>
+        <button onclick="copyIP()" class="btn">نسخ</button>
+        <p id="copy-message" class="hidden">نشكرك على الانضمام إلى سيرفرنا ونتمنى أن يكون قد نال إعجابك، وإذا أردت أي شيء اتصل بالأونر أو إحدى الأدمنز.</p>
+    </div>
+
+    <script>
+        function copyIP() {
+            const ipText = document.getElementById("server-ip").innerText;
+            navigator.clipboard.writeText(ipText).then(() => {
+                document.getElementById("copy-message").classList.remove("hidden");
+            });
+        }
+    </script>
+
+</body>
+</html>
