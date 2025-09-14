@@ -1,39 +1,0 @@
-<!DOCTYPE html>
-<html lang="ar">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>رمضان كرافت (Java)</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-<header>
-    <img src="ramadancraft.png" alt="رمضان كرافت" class="logo">
-    <div class="language-selector">
-        <button onclick="toggleLanguages()">🌍 تغيير اللغة</button>
-        <div class="language-list" id="languageList">
-            <a href="?lang=ar">🇸🇦 العربية</a>
-            <a href="?lang=es">🇪🇸 الإسبانية</a>
-            <a href="?lang=fr">🇫🇷 الفرنسية</a>
-            <a href="?lang=en">🇬🇧 الإنجليزية</a>
-        </div>
-    </div>
-</header>
-
-<h1>مرحبًا بكم في رمضان كرافت (Java)</h1>
-
-<div class="buttons">
-    <a href="mods.html" class="btn">📦 الحصول على المودات المطلوبة</a>
-    <a href="ip.html" class="btn">🌍 الحصول على الآي بي</a>
-</div>
-
-<script>
-    function toggleLanguages() {
-        let langList = document.getElementById("languageList");
-        langList.style.display = langList.style.display === "block" ? "none" : "block";
-    }
-</script>
-
-</body>
-</html>
